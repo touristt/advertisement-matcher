@@ -14,7 +14,7 @@ def getfunc():
 	return get_matches(datum["ads"], datum["user"])
  
 @app.route("/keyword", methods=['GET','POST'])
-def getfunc(): 
+def getExtracted(): 
 	if request.method == "GET":
 		return render_template('index.html')
 	datum = request.get_json()
