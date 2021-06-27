@@ -1,5 +1,5 @@
-flask=="*"
-flask-cors=="*"
-sklearn=="*"
-nltk=="*"
-gunicorn=="*"
+flask
+flask-cors 
+sklearn
+nltk
+gunicorn=
