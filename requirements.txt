@@ -2,4 +2,4 @@ flask
 flask-cors 
 sklearn
 nltk
-gunicorn=
+gunicorn
