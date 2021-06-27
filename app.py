@@ -2,7 +2,7 @@ from flask import Flask, request, jsonify, render_template
 import json 
 from flask_cors import CORS
 from cosine_similarity import get_matches 
-
+from keyword import extract
 app = Flask(__name__)
 CORS(app)
 
@@ -12,6 +12,13 @@ def getfunc():
 		return render_template('index.html')
 	datum = request.get_json()
 	return get_matches(datum["ads"], datum["user"])
+ 
+@app.route("/keyword", methods=['GET','POST'])
+def getfunc(): 
+	if request.method == "GET":
+		return render_template('index.html')
+	datum = request.get_json()
+	return extract(datum["content"])
  
 if __name__ == '__main__':
 		app.debug = True
