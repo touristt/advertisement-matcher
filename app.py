@@ -2,7 +2,7 @@ from flask import Flask, request, jsonify, render_template
 import json 
 from flask_cors import CORS
 from cosine_similarity import get_matches 
-from keyword import extract
+from keyword_extraction import extract
 app = Flask(__name__)
 CORS(app)
 
